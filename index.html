@@ -31,7 +31,35 @@
       <nav class="container mx-auto px-4 lg:px-32">
         <div class="navbar">
           <div class="navbar-start">
-            <div class="dropdown">
+            <div class="flex items-center">
+              <div
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[rgb(171,239,95)]"
+              >
+                <i
+                  class="fa-solid fa-arrow-right text-xl text-black transform rotate-[315deg]"
+                ></i>
+              </div>
+              <a
+                class="btn btn-ghost text-3xl font-bold hover:bg-transparent hover:text-current"
+                >Rinterio</a
+              >
+            </div>
+          </div>
+
+          <div class="navbar-center hidden lg:flex">
+            <ul
+              class="menu menu-horizontal px-1 text-sm font-semibold space-x-2"
+            >
+              <li><a class="opacity-75 hover:opacity-100">Home</a></li>
+              <li><a class="opacity-75 hover:opacity-100">Services</a></li>
+              <li><a class="opacity-75 hover:opacity-100">Portfolio</a></li>
+              <li><a class="opacity-75 hover:opacity-100">Blogs</a></li>
+              <li><a class="opacity-75 hover:opacity-100">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="navbar-end flex items-center space-x-3">
+            <div class="dropdown dropdown-end">
               <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -57,42 +85,30 @@
                 <li><a class="text-sm opacity-75">Portfolio</a></li>
                 <li><a class="text-sm opacity-75">Blogs</a></li>
                 <li><a class="text-sm opacity-75">Contact Us</a></li>
+                <li class="lg:hidden">
+                  <a
+                    class="btn text-sm px-4 py-2 bg-[rgb(171,239,95)] border-none hover:bg-[rgb(151,219,75)] text-black rounded-full inline-flex items-center justify-center"
+                  >
+                    <span class="flex-grow text-center">Book Consult</span>
+                    <div
+                      class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-black ml-2"
+                    >
+                      <i
+                        class="fa-solid fa-arrow-right text-xs text-white transform rotate-[315deg]"
+                      ></i>
+                    </div>
+                  </a>
+                </li>
               </ul>
             </div>
-            <div class="flex items-center">
-              <div
-                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[rgb(171,239,95)]"
-              >
-                <i
-                  class="fa-solid fa-arrow-right text-xl text-black transform rotate-[315deg]"
-                ></i>
-              </div>
-              <a
-                class="btn btn-ghost text-3xl font-bold hover:bg-transparent hover:text-current"
-                >Rinterio</a
-              >
-            </div>
-          </div>
-          <div class="navbar-center hidden lg:flex">
-            <ul
-              class="menu menu-horizontal px-1 text-sm font-semibold space-x-2"
-            >
-              <li><a class="opacity-75 hover:opacity-100">Home</a></li>
-              <li><a class="opacity-75 hover:opacity-100">Services</a></li>
-              <li><a class="opacity-75 hover:opacity-100">Portfolio</a></li>
-              <li><a class="opacity-75 hover:opacity-100">Blogs</a></li>
-              <li><a class="opacity-75 hover:opacity-100">Contact Us</a></li>
-            </ul>
-          </div>
-          <div class="navbar-end flex items-center space-x-3">
-            <button class="bg-white p-2 rounded-full">
+            <button class="bg-white p-2 rounded-full lg:block hidden">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
-            <button class="p-2 rounded-full">
+            <button class="p-2 rounded-full lg:block hidden">
               <i class="fa-solid fa-cart-shopping"></i>
             </button>
             <a
-              class="btn text-sm px-4 py-2 bg-[rgb(171,239,95)] border-none hover:bg-[rgb(151,219,75)] text-black rounded-full inline-flex items-center justify-center"
+              class="btn text-sm px-4 py-2 bg-[rgb(171,239,95)] border-none hover:bg-[rgb(151,219,75)] text-black rounded-full inline-flex items-center justify-center lg:flex hidden"
             >
               <span class="flex-grow text-center">Book Consult</span>
               <div
@@ -173,31 +189,34 @@
                   modern sophistication, featuring weathered wood, sleek metal
                   accents.
                 </p>
-                <div class="flex flex-col md:flex-row gap-4">
-                  <div class="card bg-base-100 shadow-xl md:w-1/2">
-                    <figure>
-                      <img
-                        src="assets/commercial.png"
-                        alt="Commercial"
-                        class=""
-                      />
-                    </figure>
-                    <div class="card-body">
-                      <h2 class="card-title">Commercial Projects</h2>
-                      <p>Innovative designs for modern businesses.</p>
+                <div class="flex flex-col gap-4">
+                  <div class="card bg-base-100 shadow-xl">
+                    <div class="flex flex-col md:flex-row">
+                      <figure class="md:w-1/3">
+                        <img
+                          src="assets/commercial.png"
+                          alt="Commercial"
+                        />
+                      </figure>
+                      <div
+                        class="card-body md:w-2/3 flex flex-col justify-center "
+                      >
+                        <h2 class="card-title">Commercial Projects</h2>
+                        <p>Innovative designs for modern businesses.</p>
+                      </div>
                     </div>
                   </div>
-                  <div class="card bg-base-100 shadow-xl md:w-1/2">
-                    <figure>
-                      <img
-                        src="assets/commercial.png"
-                        alt="Residential"
-                        class=""
-                      />
-                    </figure>
-                    <div class="card-body">
-                      <h2 class="card-title">Residential Projects</h2>
-                      <p>Comfortable and stylish living spaces.</p>
+                  <div class="card bg-base-100 shadow-xl">
+                    <div class="flex flex-col md:flex-row">
+                      <figure class="md:w-1/3">
+                        <img src="assets/commercial.png" alt="Residential" />
+                      </figure>
+                      <div
+                        class="card-body md:w-2/3 flex flex-col justify-center"
+                      >
+                        <h2 class="card-title">Residential Projects</h2>
+                        <p>Comfortable and stylish living spaces.</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -208,7 +227,7 @@
             </div>
 
             <div
-              class="stats stats-vertical lg:stats-horizontal shadow mt-16 flex justify-center"
+              class="stats stats-vertical lg:stats-horizontal shadow mt-16 w-full"
             >
               <div class="stat text-center">
                 <div class="stat-title">dfsd</div>
@@ -349,7 +368,6 @@
                 <span class="text-sm font-bold">Explore our Latest works</span>
               </div>
             </div>
-
             <h3 class="text-5xl font-extrabold mb-6">Our Latest Portfolio</h3>
             <p class="max-w-2xl mx-auto">
               The barn house captivates with its blend of rustic charm and
@@ -357,54 +375,107 @@
               accents.
             </p>
           </div>
-          <div class="grid grid-cols-3 gap-8">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div
-              class="col-span-2 card bg-base-100 shadow-xl rounded-lg overflow-hidden"
+              class="md:col-span-2 card bg-base-100 shadow-xl rounded-lg overflow-hidden border border-gray-300"
             >
-              <figure>
-                <img src="assets/img1.png" alt="Project 1" class="" />
-              </figure>
-              <div class="card-body">
-                <h2 class="card-title">Modern Living Room</h2>
-                <p>
-                  A contemporary living space that blends comfort with style,
-                  featuring clean lines and natural materials.
-                </p>
-                <div class="card-actions justify-start mt-4">
-                  <button class="btn btn-primary">View Details</button>
+              <div class="flex flex-col md:flex-row h-64">
+                <figure class="md:w-1/2 p-4">
+                  <img
+                    src="assets/img1.png"
+                    alt="Project 1"
+                    class="w-full h-full object-cover rounded-lg"
+                  />
+                </figure>
+                <div class="card-body md:w-1/2 flex flex-col justify-center">
+                  <h2 class="card-title">Modern Living Room</h2>
+                  <p>
+                    A contemporary living space that blends comfort with style,
+                    featuring clean lines and natural materials.
+                  </p>
+                  <div class="card-actions justify-start mt-4">
+                    <a
+                    class="btn text-sm px-4 py-2 bg-[rgb(233,245,221)] border-none hover:bg-[rgb(151,219,75)] text-black rounded-full inline-flex items-center justify-center "
+                  >
+                    <span class="flex-grow text-center">View Details</span>
+                    <div
+                      class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-black ml-2"
+                    >
+                      <i
+                        class="fa-solid fa-arrow-right text-xs text-white transform rotate-[315deg]"
+                      ></i>
+                    </div>
+                  </a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="card bg-base-100 shadow-xl rounded-lg overflow-hidden">
-              <figure>
-                <img src="assets/img2.png" alt="Project 2" class="" />
+            <div
+              class="card bg-base-100 shadow-xl rounded-lg overflow-hidden border border-gray-300"
+            >
+              <figure class="p-4 h-64">
+                <img
+                  src="assets/img2.png"
+                  alt="Project 2"
+                  class="w-full h-full object-cover rounded-lg"
+                />
               </figure>
             </div>
           </div>
-          <div class="grid grid-cols-3 gap-8 mt-8">
-            <div class="card bg-base-100 shadow-xl rounded-lg overflow-hidden">
-              <figure>
-                <img src="assets/img3.png" alt="Project 2" class="" />
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-8">
+            <div
+              class="card bg-base-100 shadow-xl rounded-lg overflow-hidden border border-gray-300"
+            >
+              <figure class="p-4 h-48">
+                <img
+                  src="assets/img3.png"
+                  alt="Project 3"
+                  class="w-full h-full object-cover rounded-lg"
+                />
               </figure>
             </div>
-            <div class="card bg-base-100 shadow-xl rounded-lg overflow-hidden">
-              <figure>
-                <img src="assets/img4.png" alt="Project 2" class="" />
-              </figure>
-              <div class="card-body">
-                <h2 class="card-title">Rustic Kitchen Design</h2>
-                <p>
-                  A warm and inviting kitchen that combines traditional elements
-                  with modern functionality.
-                </p>
-                <div class="card-actions justify-start mt-4">
-                  <button class="btn btn-primary">View Details</button>
+            <div
+              class="card bg-base-100 shadow-xl rounded-lg overflow-hidden md:col-span-2 border border-gray-300"
+            >
+              <div class="flex flex-col md:flex-row h-48">
+                <figure class="md:w-1/2 p-4">
+                  <img
+                    src="assets/img4.png"
+                    alt="Project 4"
+                    class="w-full h-full object-cover rounded-lg"
+                  />
+                </figure>
+                <div class="card-body md:w-1/2 flex flex-col justify-center">
+                  <h2 class="card-title text-lg">Commercial</h2>
+                  <p class="text text-sm">
+                    A warm and inviting kitchen that combines traditional.
+                   
+                  </p>
+                  <div class="card-actions justify-start mt-4">
+                    <a
+                    class="btn text-sm px-4 py-2 bg-[rgb(233,245,221)] border-none hover:bg-[rgb(151,219,75)] text-black rounded-full inline-flex items-center justify-center"
+                  >
+                    <span class="flex-grow text-center">View Details</span>
+                    <div
+                      class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-black ml-2"
+                    >
+                      <i
+                        class="fa-solid fa-arrow-right text-xs text-white transform rotate-[315deg]"
+                      ></i>
+                    </div>
+                  </a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="card bg-base-100 shadow-xl rounded-lg overflow-hidden">
-              <figure>
-                <img src="assets/img5.png" alt="Project 2" class="" />
+            <div
+              class="card bg-base-100 shadow-xl rounded-lg overflow-hidden border border-gray-300"
+            >
+              <figure class="p-4 h-48">
+                <img
+                  src="assets/img5.png"
+                  alt="Project 5"
+                  class="w-full h-full object-cover rounded-lg"
                 />
               </figure>
             </div>
@@ -464,61 +535,53 @@
                 class="textarea textarea-bordered w-full md:col-span-2 rounded-2xl"
                 rows="4"
               ></textarea>
-              <button class="btn md:col-span-2 rounded-full bg-[rgb(168,235,91)] text-black">
+              <button
+                class="btn md:col-span-2 rounded-full bg-[rgb(168,235,91)] text-black"
+              >
                 Send Message
                 <div
-                class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-black ml-2"
-              >
-                <i
-                  class="fa-solid fa-arrow-right text-xs text-white transform rotate-[315deg]"
-                ></i>
-              </div>
+                  class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-black ml-2"
+                >
+                  <i
+                    class="fa-solid fa-arrow-right text-xs text-white transform rotate-[315deg]"
+                  ></i>
+                </div>
               </button>
-              
             </form>
           </section>
         </div>
       </div>
     </main>
 
-    <footer class="footer footer-center bg-gray-900 text-white p-10">
-      <aside>
-        <svg
-          width="50"
-          height="50"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          class="inline-block fill-current"
-        >
-          <path
-            d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"
-          ></path>
-        </svg>
-        <p class="font-bold">
-          ACME Industries Ltd. <br />Providing reliable tech since 1992
+    <footer class="footer footer-center bg-gray-900 text-white p-6 md:p-10">
+      <aside class="mb-6 md:mb-0">
+        <div class="flex items-center justify-center mb-4">
+          <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[rgb(171,239,95)]">
+            <i class="fa-solid fa-arrow-right text-xl text-black transform rotate-[315deg]"></i>
+          </div>
+          <a class="btn btn-ghost text-3xl font-bold hover:bg-transparent hover:text-current">Rinterio</a>
+        </div>
+        <p class="max-w-xs md:max-w-2xl mx-auto text-gray-400 text-sm md:text-base">
+          The barn house captivates with its blend of rustic charm and
+          modern sophistication, featuring weathered wood, sleek metal
+          accents.
         </p>
       </aside>
-      <nav class="grid grid-flow-col gap-24">
+      <nav class="grid grid-cols-1 gap-4 mb-6 md:mb-0">
         <a class="link link-hover">Home</a>
         <a class="link link-hover">Services</a>
         <a class="link link-hover">Portfolio</a>
         <a class="link link-hover">Blogs</a>
         <a class="link link-hover">Contact Us</a>
       </nav>
-      <a
-      class="btn text-sm px-4 py-2 bg-[rgb(171,239,95)] border-none hover:bg-[rgb(151,219,75)] text-black rounded-full inline-flex items-center justify-center"
-    >
-      <span class="flex-grow text-center">Book Consult</span>
-      <div
-        class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-black ml-2"
-      >
-        <i
-          class="fa-solid fa-arrow-right text-xs text-white transform rotate-[315deg]"
-        ></i>
-      </div>
-    </a>
+      <a class="btn text-sm px-4 py-2 bg-[rgb(171,239,95)] border-none hover:bg-[rgb(151,219,75)] text-black rounded-full inline-flex items-center justify-center">
+        <span class="flex-grow text-center">Book Consult</span>
+        <div class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-black ml-2">
+          <i class="fa-solid fa-arrow-right text-xs text-white transform rotate-[315deg]"></i>
+        </div>
+      </a>
     </footer>
+    
+    
   </body>
 </html>
